@@ -1,0 +1,710 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 80px;
+    margin-top: 40px;
+    font-size: 16px;
+    font-family: 'kanit', sans-serif;
+    background-color: black;
+    color: white;
+}
+.menu{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+.menu img{
+    max-width: 76px;
+    min-width: 24px;
+}
+.menu ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: column;
+    gap: 16px;
+    justify-items: end;
+    list-style: none;
+}
+.menu li a{
+    text-decoration: none;
+    color: white;
+}
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    position: relative;
+    z-index: 2;
+}
+.menu-toggle input[type="checkbox"]{
+    position: absolute;
+    width: 44px;
+    height: 20px;
+    left: -10px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+.menu-toggle span{
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    border-radius: 4px;
+    transition: all 0.3ms;
+}
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0 ;
+}
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100% ;
+}
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px, 3px);
+}
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-1px, -4px);
+}
+.menu-toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
+.hero{
+    padding: 150px 0;
+    grid-template-rows: 1fr 2fr;
+    display: grid;
+    gap: 24px;
+}
+.hero .info-personal{
+    display: grid;
+    grid-template-columns:600px ;
+    align-items: end;
+}
+.info-personal p{
+    font-size: 24px;
+    text-align: start;
+}
+.jobrole{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.jobrole .heading{
+    align-items: start;
+}
+.jobrole h1{
+    font-size: 92px;
+    line-height: 92px;
+}
+.jobrole .contact{
+    padding-bottom: 40px;
+    align-self:  end;
+    align-items: end;
+    justify-self: end;
+}
+.contact {
+    direction: rtl;
+}
+/* Project 1 */
+.project{
+    display: grid;
+    gap: 64px;
+}
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: column;
+    gap: 32px;
+    background-color: rgb(245,226,209);
+    margin: 44px;
+    padding: 48px;
+    border-radius: 32px;
+}
+.card-content{
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    gap: 12px;
+}
+.img-content{
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    place-items: center;
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 12px;
+}
+.img-content img{
+    z-index: -1;
+    max-height: 300px;
+    min-width: 100px;
+    border-radius: 16px;
+    background-size: cover;
+
+}
+.card{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.card-heading h2{
+    font-size: 32px;
+    font-weight: 200;
+    color: rgb(36, 36, 36);
+    letter-spacing: 1px;
+}
+.card-heading p{
+    font-size: 24px;
+    font-weight: 300;
+    color: rgb(61, 61, 61);
+}
+.card-button {
+    align-self: end;
+    margin-bottom: 16px;
+}
+.card .card-button a{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(36, 36, 36);
+    padding: 12px 24px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    align-self: end;
+}
+.sub-content{
+    display: grid;
+    grid-template-rows: repeat(2, .5fr);
+}
+.sub-heading-content h3{
+    font-size: 20px;
+    font-weight: 300;
+    color: rgb(36, 36, 36);
+    place-self: start;
+}
+.sub-support-content p{
+    line-height: 52px;
+    font-size: 52px;
+    font-weight: 300;
+    color: rgb(36, 36, 36);
+    place-self: start;
+}
+
+/* Project 2 */
+.content-1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 44px;
+    padding: 48px;
+    border-radius: 32px;
+    background-color: #d1eafa;
+    gap: 32px;
+}
+.card-1{
+    display: grid;
+    grid-template-rows: 1fr .5fr;
+}
+.card-1 .card-button a{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(36, 36, 36);
+    padding: 12px 24px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    align-self: end;
+}
+.card-1 .card-content-1{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+.sub-content-1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 24px;
+}
+.sub-content-1 .support-content-1{
+    display: grid;
+    grid-template-rows: repeat(2, .5fr);
+}
+.sub-content-1 .support-content-2{
+    display: grid;
+    grid-template-rows: repeat(2, .5fr);
+}
+.support-content-1 .sub-heading-content-1 h3{
+    font-size: 20px;
+    font-weight: 300;
+    color: rgb(36, 36, 36);
+    place-self: start;
+}
+.support-content-1 .sub-support-content-1{
+    line-height: 52px;
+    font-size: 52px;
+    font-weight: 300;
+    color: rgb(36, 36, 36);
+    place-self: start;
+}
+.support-content-2 .sub-heading-content-2 h3{
+    font-size: 20px;
+    font-weight: 300;
+    color: rgb(36, 36, 36);
+    place-self: start;
+}
+.support-content-2 .sub-support-content-2 p{
+    line-height: 52px;
+    font-size: 52px;
+    font-weight: 300;
+    color: rgb(36, 36, 36);
+    place-self: start;
+}
+
+/* Experiance Section */
+.experiance h2{
+    font-size: 40px;
+    font-weight: 300;
+    color: whitesmoke;
+    margin: 44px;
+}
+.job{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 24px;
+    margin: 44px;
+}
+.role-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.role-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.role-3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.role-1 .role-heading h3{
+    font-size: 32px;
+    font-weight: 300;
+    color: rgba(128, 128, 128);
+}
+.role-2 .role-heading h3{
+    font-size: 32px;
+    font-weight: 300;
+    color: rgba(128, 128, 128);
+}
+.role-3 .role-heading h3{
+    font-size: 32px;
+    font-weight: 300;
+    color: rgba(128, 128, 128);
+}
+.role-1 .period{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 12px;
+}
+.period .company h4{
+    font-size: 28px;
+    font-weight: 300;
+    color: rgba(128, 128, 128);
+    direction: rtl;
+}
+.period .time p{
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(128, 128, 128);
+    direction: rtl;
+}
+
+/* Offering Content */
+.offer-content{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 24px;
+    justify-content: center;
+    padding: 120px 152px;
+}
+.offer-content .offer-text h3{
+    font-size: 64px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 84px;
+}
+.offer-text strong{
+    color: rgb(128, 128, 128);
+    font-weight: 500;
+}
+.offer-content .link a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+}
+.offer-content .cv p{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+}
+/* Responsive Breakout */
+@media (max-width: 1024px) {
+    .menu{
+        grid-template-columns: 1fr 1fr;
+    }
+    .menu-toggle{
+        order: 1;
+    }
+    .logo{
+        justify-self: start;
+    }
+    .img-content img{
+        z-index: -1;
+        max-height: 300px;
+        min-width: 50px;
+        border-radius: 16px;
+        background-size: cover;
+    }
+    .img-content{
+        display: grid;
+        grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+        place-items: start;
+        border-radius: 12px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .card{
+        grid-template-rows: 1fr .5fr;
+    }
+    .card-button{
+        align-self: end;
+    }
+    .sub-content{
+        place-self: start;
+    }
+}
+@media (max-width: 865px) {
+    .img-content img{
+        max-width: 200px;
+        min-width: 150px;
+        border-radius: 16px;
+    }
+    .img-content{
+        display: grid;
+        grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+        place-items: center;
+        border-radius: 12px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .card{
+        grid-template-rows: 1fr .5fr;
+    }
+    .card-button{
+        align-self: center;
+    }
+    .card-content .sub-content{
+        align-self: center;
+    }
+    .card-content-1{
+        display: grid;
+        grid-template-rows: 1fr .5fr;
+    }
+    .card-content-1 .sub-content-1{
+        place-self: center;
+        padding-bottom: 64px;
+    }
+    .card-1 .card-button{
+        align-self: center;
+    }
+}
+@media (max-width: 768px) {
+    .menu{
+        order: 1;
+        justify-items: end;
+    }
+    .menu-toggle{
+        display: flex;
+    }
+    .menu ul{
+        display: flex;
+        position: absolute;
+        padding-top: 100px;
+        right: 0;
+        top: 0;
+        height: 25vh;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        flex-direction: column;
+        z-index: 1;
+        transform: translateY(-100%);
+        transition: all 1s;
+        border-radius: 0 0 16px 16px;
+    }
+    .menu ul.slide{
+        transform: translateY(0);
+    }
+    .logo{
+        display: block;
+        z-index: 2;
+    }
+    .logo img{
+        max-height: 64px;
+        min-width: 40px;
+    }
+    .hero{
+        padding: 110px 0;
+        grid-template-rows: 1fr 2fr;
+        gap: 24px;
+    }
+    .hero .info-personal{
+        display: grid;
+        grid-template-columns:1fr ;
+        align-items: end;
+    }
+    .jobrole{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 1fr);
+        gap: 24px;
+    }
+    .jobrole h1{
+        font-size: 52px;
+        line-height: 52px;
+    }
+    .jobrole .contact{
+        place-self: end;
+    }
+    /* project 1 */
+    .img-content{
+        display: none;
+    }
+    .content{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 24px;
+        gap: 16px;
+    }
+    .card{
+        display: grid;
+        grid-template-rows: 1fr .5fr;
+    }
+    .card-content{
+        display: grid;
+        grid-template-rows: 1fr;
+    }
+    .card-heading h2{
+        font-size: 28px;
+    }
+    .card-heading p{
+        font-size: 20px;
+    }
+    .card-button {
+        align-self: end;
+    }
+    .sub-content{
+        display: grid;
+        grid-template-rows: .5fr;
+    }
+    /* project 2 */
+    .content-1{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        gap: 16px;
+        padding: 24px;
+    }
+    .card-content-1 .sub-content-1{
+        padding-bottom: 0;
+    }
+    .card-content-1{
+        display: grid;
+        grid-template-rows: 1fr;
+    }
+    /* Section Offer */
+    .offer-content{
+        padding: 120px 24px;
+        gap: 12px;
+    }
+    .offer-content .offer-text h3{
+        font-size: 32px;
+        line-height: 56px;
+    }
+}
+/* Footer */
+footer{
+    border-top: .5px solid whitesmoke;
+    margin: 0;
+}
+.footer-content{
+    display: flex;
+    padding: 64px 0 0 24px;
+    gap: 24px;
+    place-items: start    ;
+}
+.copy-right{
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.email{
+    text-decoration:underline;
+}
+.linkedin a{
+    color: whitesmoke;
+}
+.cv a{
+    color: whitesmoke;
+}
+@media (max-width: 567px) {
+    body{
+        margin: 24px;
+    }
+    .logo img{
+        max-height: 42px;
+        min-width: 24px;
+    }
+    .hero{
+        padding: 32px 0;
+        grid-template-rows: 1fr 1fr;
+        gap: 24px;
+    }
+    .hero .info-personal{
+        display: grid;
+        grid-template-columns:1fr ;
+        align-items: end;
+    }
+    .info-personal p{
+        font-size: 20px;
+    }
+    .jobrole{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+        gap: 24px;
+    }
+    .jobrole h1{
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .jobrole .contact{
+        place-self: end;
+    }
+    .project{
+        display: grid;
+        grid-template-rows: 1fr;
+    }
+    /* project 1 */
+    .content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 24px;
+        gap: 0;
+    }
+    .card{
+        display: grid;
+        grid-template-rows: 1fr .5fr;
+    }
+    .card-content{
+        display: grid;
+        grid-template-rows: 1fr;
+    }
+    .card-heading h2{
+        font-size: 28px;
+    }
+    .card-heading p{
+        font-size: 20px;
+    }
+    .card-button {
+        justify-content: end;
+        align-self: center;
+    }
+    .sub-content{
+        display: grid;
+        grid-template-rows: .5fr;
+    }
+    /* project 2 */
+    .content-1{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        gap: 16px;
+    }
+    .card-content-1 .sub-content-1{
+        display: grid;
+        grid-template-columns: repeat(2, .5fr);
+        gap: 24px;
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .card-content-1 .sub-content-1{
+        padding-bottom: 0;
+    }
+    .card-content-1{
+        display: grid;
+        grid-template-rows: 1fr;
+    }
+
+    /* Experiance Section */
+    .experiance h2{
+        font-size: 28px;
+        text-align: center;
+    }
+    .job{
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 24px;
+        margin: 0;
+    }
+    .role-1{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        align-content: center;
+        justify-content: center;
+        border-bottom: .1px solid rgba(128, 128, 128);
+    }
+    .role-2{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        align-content: center;
+        justify-content: center;
+        border-bottom: .1px solid rgba(128, 128, 128);
+    }
+    .role-3{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        align-content: center;
+        justify-content: center;
+        border-bottom: .1px solid rgba(128, 128, 128);
+    }
+    .period .company h4{
+        font-weight: 500;
+       text-align: center;
+    }
+    .period .time p{
+        font-weight: 400;
+        text-align: center;
+    }
+    .role-1 .role-heading h3{
+        font-weight: 500;
+    }
+    .role-2 .role-heading h3{
+        font-weight: 500;
+    }
+    .role-3 .role-heading h3{
+        font-weight: 500;
+    }
+    /* Footer Section */
+    .footer-content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding:24px;
+        gap: 24px;
+        place-items: start ;
+    }
+}
